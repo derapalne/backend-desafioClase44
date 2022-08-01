@@ -1,3 +1,5 @@
-import { getProdId, postProd, putProdId, deleteProdId } from "./productos.controller.js";
+import {mainRoutes} from "./productos.controller.js";
+import {graphqlRoutes} from "./productosGraphql.controller.js";
 
-export { getProdId, postProd, putProdId, deleteProdId };
+
+export {mainRoutes, graphqlRoutes};

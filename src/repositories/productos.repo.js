@@ -29,6 +29,11 @@ export default class ProductosRepo {
         return dtos.map((dto) => new ProductoDto(dto));
     }
 
+    async getCampoValor(campo, valor) {
+        const dtos = await this.dao.getCampoValor(campo, valor);
+        return dtos.map((dto) => new ProductoDto(dto));
+    }
+
     async getById(id) {
         const daoResponse = await this.dao.getById(id);
         const dto = new ProductoDto(daoResponse);

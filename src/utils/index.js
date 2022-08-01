@@ -1,3 +1,4 @@
 import config from "./config.js";
+import { getById, getAll, add, updateById, deleteById, deleteAll } from "./graphqlFunctions.js";
 
-export {config};
+export {config, getById, getAll, add, updateById, deleteById, deleteAll};

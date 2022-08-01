@@ -11,6 +11,10 @@ export class ProductosService {
         return await repo.getAll();
     }
 
+    async getCampoValor(campo, valor) {
+        return await repo.getCampoValor(campo, valor);
+    }
+
     async getById(id) {
         return await repo.getById(id);
     }

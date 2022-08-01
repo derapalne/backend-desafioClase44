@@ -7,16 +7,14 @@ export default buildSchema(`
         price: Int,
         description: String
     }
-
     input ProductoInput {
         title: String,
         price: Int,
         description: String
     }
-
     type Query {
         getProducto(id: ID!): Producto,
-        getProductos(): [Producto],
+        getProductos(campo: String, valor: String): [Producto],
     }
     type Mutation {
         createProducto(datos: ProductoInput): Producto,

@@ -38,8 +38,22 @@ class ProductosDao {
                 .where({ id: id })
                 .select("*")
                 .then((dataResp) => {
-                    // console.log(dataResp);
                     data = dataResp[0];
+                })
+                .catch((e) => console.log(e));
+            return data;
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async getCampoValor(campo, valor) {
+        try {
+            let data = null;
+            await this.knex(this.tableName)
+                .select("*")
+                .then((dataResp) => {
+                    data = dataResp.filter(p => p[campo] == valor);
                 })
                 .catch((e) => console.log(e));
             return data;
