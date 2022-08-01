@@ -1,0 +1,38 @@
+****************** RESULTADO DE AXIOS *****************************
+
+--------------POSTEAR PRODUCTO--------------
+33
+--------------TRAER PRODUCTOS---------------
+[
+  {
+    title: 'Quisiera ser una mosca',
+    price: 270,
+    description: 'Para pararme en tu piel'
+  },
+  { title: 'Azucar Mascabo', price: 400, description: 'Riquísima' }
+]
+-------------TRAER PRODUCTO ID 33------------
+{ title: 'Azucar Mascabo', price: 400, description: 'Riquísima' }
+--------------MODIFICAR PRODUCTO------------
+1
+---------------BORRAR PRODUCTO--------------
+{ title: 'Azucar Blanca', price: 200, description: 'Normal' }
+
+****************** RESULTADO DE MOCHA *****************************
+
+  Prueba general del CRUD de la app
+    Inicializar la base de datos
+      ✔ debería borrar todos los datos existentes (64ms)
+      ✔ debería postear el primer producto
+      ✔ debería postear el segundo producto
+    Traer productos
+      ✔ debería traer todos los productos
+      ✔ debería traer el primer producto
+      ✔ debería traer el segundo producto
+    Modificar productos
+      ✔ debería modificar el primer producto
+    Borrar productos
+      ✔ debería borrar el segundo producto
+
+
+  8 passing (202ms)
