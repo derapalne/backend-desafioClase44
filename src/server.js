@@ -9,7 +9,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use("/api", routerMain);
-app.use("/api/graphql", routerGraphql);
+// app.use("/api/graphql", routerGraphql);
 app.use(
     "/graphql",
     graphqlHTTP({

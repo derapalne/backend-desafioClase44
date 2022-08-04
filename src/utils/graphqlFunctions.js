@@ -1,14 +1,12 @@
 import ProductosService from "../services/index.js";
 const service = new ProductosService();
 
-import crypto from "crypto";
-
 const getById = async ({ id }) => {
     return await service.getById(id);
 };
 
-const getAll = async ({ campo, valor }) => {
-    if (campo && valor) {
+const getAll = async (req) => {
+    if (req.campo && req.valor) {
         return await service.getCampoValor(campo, valor);
     } else {
         return await service.getAll();

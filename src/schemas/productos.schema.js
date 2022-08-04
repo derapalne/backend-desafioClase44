@@ -13,13 +13,14 @@ export default buildSchema(`
         description: String
     }
     type Query {
-        getProducto(id: ID!): Producto,
-        getProductos(campo: String, valor: String): [Producto],
+        getById(id: ID!): Producto,
+        getAll(campo: String, valor: String): [Producto],
     }
     type Mutation {
-        createProducto(datos: ProductoInput): Producto,
-        updateProducto(id: ID!, datos: ProductoInput): Producto,
-        deleteProducto(id: ID!): Producto,
+        add(datos: ProductoInput): ID,
+        updateById(id: ID!, datos: ProductoInput): ID,
+        deleteById(id: ID!): ID,
+        deleteAll: Int 
     }
 
 `)

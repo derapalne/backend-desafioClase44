@@ -3,6 +3,7 @@ import { getById, getAll, add, updateById, deleteById, deleteAll } from "../util
 const getProdId = async (req, res) => {
     let respuesta = null;
     const id = req.params.id;
+    const query = req.body.query;
     if (id != undefined) {
         // console.log("hooolaaaa");
         respuesta = await getById(id);
